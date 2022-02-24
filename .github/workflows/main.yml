@@ -32,6 +32,7 @@ jobs:
       - name: PyInstaller Windows
         uses: JackMcKew/pyinstaller-action-windows@v0.1.2
         with:
+          path: .
           spec: ExcelComparer.spec
       
       - uses: actions/upload-artifact@v2
