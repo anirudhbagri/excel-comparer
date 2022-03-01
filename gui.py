@@ -49,7 +49,8 @@ layout = [
     [sg.HorizontalSeparator()],
     [sg.T("")],
     [
-        [sg.Button(" Start ", key="--START--")]
+        sg.Button(" Start ", key="--START--"),
+        sg.CBox(" Ignore case ", key="--case--")
     ],
 ]
 font = "Arial, 12"
@@ -73,8 +74,9 @@ while True:
         ws2 = values.get("--ws2--", None)
         cols1 = values.get("--cols1--", None)
         cols2 = values.get("--cols2--", None)
+        case = values.get("--case--", None)
         try:
-            main.main(wb1, wb2, ws1, ws2, cols1, cols2)
+            main.main(wb1, wb2, ws1, ws2, cols1, cols2, case)
         except Exception as e:
             print("Something went wrong:", str(e))
 window.close()
