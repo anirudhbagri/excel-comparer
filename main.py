@@ -11,7 +11,6 @@ def compare_cells(c1: Cell, c2: Cell, case: bool):
     if case:
         if c1.value.lower() != c2.value.lower():
             print(f"[w1'{c1.coordinate}' != w2'{c2.coordinate}'] {c1.value} != {c2.value}")
-            print("WOWOWO")
     
     else:
         if c1.value != c2.value:
